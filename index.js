@@ -38,9 +38,9 @@ app.get('/api/:date', (req, res) => {
       date = new Date();
     }
     // Check if the input is in Unix timestamp format
-    else if (!isNaN(dateInput)) {
+    else if (!isNaN(dateString)) {
       // Convert the input to a number and create a Date object
-      date = new Date(parseInt(dateInput)); 
+      date = new Date(parseInt(dateString)); 
     } 
     else { 
       // If dateString is a valid date string, parse it
